@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (diff <= 0) {
             overlay.classList.add('hidden');
             menu.classList.remove('blurred');
-            // Usiamo il nome corretto della variabile
             clearInterval(timerInterval); 
             return;
         }
