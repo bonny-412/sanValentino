@@ -23,6 +23,7 @@ body {
     background: var(--bg-color);
     color: var(--text-color);
     line-height: 1.4;
+    overflow-x: hidden;
 }
 
 /* ===== MENU ===== */
@@ -39,6 +40,7 @@ body {
     align-items: center;
     gap: 2vh;
     transition: filter 1.2s ease;
+    overflow: hidden;
 }
 
 /* Blur overlay */
@@ -119,6 +121,19 @@ h2 {
     animation: heartPulse 2s ease-in-out infinite;
 }
 
+.icon-heart {
+    width: 5vw;
+    max-width: 40px;
+    height: 5vw;
+    max-height: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.85;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffe6e6'%3E%3Cpath d='M2 9.1371C2 14 6.01943 16.5914 8.96173 18.9109C10 19.7294 11 20.5 12 20.5C13 20.5 14 19.7294 15.0383 18.9109C17.9806 16.5914 22 14 22 9.1371C22 4.27416 16.4998 0.825464 12 5.50063C7.50016 0.825464 2 4.27416 2 9.1371Z'/%3E%3C/svg%3E");
+    animation: heartPulse 2s ease-in-out infinite;
+}
+
 /* Posizioni + rotazioni verso angoli */
 .top-left { top: 2vw; left: 2vw; --rotate: -45deg; transform: rotate(var(--rotate)); }
 .top-right { top: 2vw; right: 2vw; --rotate: 45deg; transform: rotate(var(--rotate)); }
@@ -127,9 +142,9 @@ h2 {
 
 /* ===== ANIMAZIONE ===== */
 @keyframes heartPulse {
-    0%   { transform: scale(1) rotate(var(--rotate, 0deg)); opacity: 0.8; }
-    50%  { transform: scale(1.12) rotate(var(--rotate, 0deg)); opacity: 1; }
-    100% { transform: scale(1) rotate(var(--rotate, 0deg)); opacity: 0.8; }
+    0%   { transform: scale(0.9) rotate(var(--rotate, 0deg)); opacity: 0.8; }
+    50%  { transform: scale(1.05) rotate(var(--rotate, 0deg)); opacity: 1; }
+    100% { transform: scale(0.9) rotate(var(--rotate, 0deg)); opacity: 0.8; }
 }
 
 /* ===== OVERLAY COUNTDOWN ===== */
@@ -190,7 +205,7 @@ h2 {
 @media (max-width: 1024px) {
     .menu-container {
         width: 100%;
-        height: 100vh;
+        height: 100dvh;
         border-radius: 0;
         padding: 6vh 6vw;
         margin: 0px;
@@ -210,7 +225,7 @@ h2 {
     .menu-container {
         width: 100%;
         margin: 0px;
-        height: 100vh;
+        height: 100dvh;
         border-radius: 0;
         padding: 5vh 5vw;
         justify-content: center;
