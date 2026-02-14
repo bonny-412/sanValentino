@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const minutesEl = document.getElementById('minutes');
     const secondsEl = document.getElementById('seconds');
 
-    const targetDate = new Date(2026, 1, 14, 20, 0, 0);
+    const targetDate = new Date(2026, 1, 14, 10, 0, 0);
 
     function updateCountdown() {
         const now = new Date();
